@@ -4,8 +4,9 @@ using namespace std;
 //#define	MULTIDIMENSIONAL_ARRAY
 //#define	PAIR
 //#define	ARRAY_OF_PAIR
-#define	BUBBLE_SORT
-
+#define	SORT
+//#define	BUBBLE_SORT
+#define	SELECTION_SORT
 int main(void) {
 #pragma region 多次元配列
 #ifdef MULTIDIMENSIONAL_ARRAY
@@ -48,8 +49,8 @@ int main(void) {
 #endif // ARRAY_OF_PAIR
 #pragma endregion
 
-#pragma region バブルソート
-#ifdef BUBBLE_SORT
+#ifdef SORT
+	// 配列作成
 	int n;
 	cin >> n;
 	vector<int> v(n);
@@ -57,14 +58,22 @@ int main(void) {
 	{
 		cin >> v.at(i);
 	}
+
+#ifdef BUBBLE_SORT
 	BubbleSort(v);
+#endif // BUBBLE_SORT
+
+#ifdef SELECTION_SORT
+	SelectionSort(v);
+#endif // SELECTION_SORT
+
+	// 出力
 	for (auto vv : v)
 	{
 		cout << vv << " ";
 	}
 	cout << endl;
-#endif // BUBBLE_SORT
-#pragma endregion
+#endif // SORT
 
 
 	return 0;

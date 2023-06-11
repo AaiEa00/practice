@@ -1,4 +1,4 @@
-#include "Sort.h"
+﻿#include "Sort.h"
 
 void BubbleSort(vector<int>& v)
 {
@@ -12,4 +12,23 @@ void BubbleSort(vector<int>& v)
 			}
 		}
 	}
+}
+
+void SelectionSort(vector<int>& v)
+{
+	for (int i = 0; i < v.size(); i++)
+	{
+		int minNum = i;
+		for (int j = i; j < v.size(); j++)
+		{
+			if (v.at(minNum) > v.at(j))
+				minNum = j;
+		}
+
+		swap(v.at(i), v.at(minNum));
+	}
+}
+
+void InsertionSort(vector<int>& v)
+{
 }
