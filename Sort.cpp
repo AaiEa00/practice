@@ -1,4 +1,15 @@
-﻿#include "Sort.h"
+#include "Sort.h"
+
+void Output(const vector<int>& v, const string& s)
+{
+	cout << s << endl;
+	for (auto vv : v)
+	{
+		cout << vv;
+	}
+
+	cout << endl;
+}
 
 void BubbleSort(vector<int>& v)
 {
@@ -12,6 +23,8 @@ void BubbleSort(vector<int>& v)
 			}
 		}
 	}
+
+	Output(v, "BubbleSort");
 }
 
 void SelectionSort(vector<int>& v)
@@ -27,8 +40,22 @@ void SelectionSort(vector<int>& v)
 
 		swap(v.at(i), v.at(minNum));
 	}
+
+	Output(v, "SelectionSort");
 }
 
 void InsertionSort(vector<int>& v)
+{
+}
+
+void HeapSort(vector<int>& v)
+{
+}
+
+void MergeSort(vector<int>& v)
+{
+}
+
+void QuickSort(vector<int>& v)
 {
 }
