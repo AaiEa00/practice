@@ -131,11 +131,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Sort.cpp" />
+    <ClCompile Include="source\ClusteringAlgorithm.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sort.h" />
+    <ClInclude Include="source\ClusteringAlgorithm.h" />
+    <ClInclude Include="source\Sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
