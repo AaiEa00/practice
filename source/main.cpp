@@ -1,8 +1,11 @@
 #include <utility>
 #include <Windows.h>
 #include "Sort.h"
+#include "DataStructure.h"
 using namespace std;
-#define	SORT
+//#define SORT
+#define DATA_STRUCTURE
+
 int main(void) {
     SetConsoleOutputCP(65001);
 
@@ -21,6 +24,10 @@ int main(void) {
 	SelectionSort(v);
 
 #endif // SORT
+
+#ifdef DATA_STRUCTURE
+    BinarySearchTree();
+#endif // DATA_STRUCTURE
 
 
 	return 0;
