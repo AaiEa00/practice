@@ -3,8 +3,8 @@
 #include "Sort.h"
 #include "DataStructure.h"
 using namespace std;
-//#define SORT
-#define DATA_STRUCTURE
+#define SORT
+//#define DATA_STRUCTURE
 
 int main(void) {
     SetConsoleOutputCP(65001);
@@ -14,10 +14,7 @@ int main(void) {
 	int n;
 	cin >> n;
 	vector<int> v(n);
-	for (int i = 0; i < n; i++)
-	{
-		cin >> v.at(i);
-	}
+	for (auto& i: v) cin >> v.at(i);
 
 	BubbleSort(v);
 
