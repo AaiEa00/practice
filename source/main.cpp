@@ -15,9 +15,11 @@ int main(void) {
     std::vector<int> v(n);
     for (auto& i: v) std::cin >> i;
 
-    BubbleSort(v);
+    //BubbleSort(v);
 
-    SelectionSort(v);
+    //SelectionSort(v);
+
+    InsertionSort(v);
 
 #endif // SORT
 

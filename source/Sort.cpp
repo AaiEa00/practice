@@ -11,41 +11,56 @@ void Output(const std::vector<int>& v, const std::string& s)
 	std::cout << std::endl;
 }
 
-void BubbleSort(std::vector<int>& v)
+void BubbleSort(const std::vector<int>& v)
 {
-	for (int i = 0; i < v.size(); i++)
+	std::vector<int> vv = v;
+	for (int i = 0; i < vv.size(); i++)
 	{
-		for (int j = (int)v.size() - 1; j > i; j--)
+		for (int j = (int)vv.size() - 1; j > i; j--)
 		{
-			if (v.at(j) < v.at(j - 1))
+			if (vv.at(j) < vv.at(j - 1))
 			{
-				std::swap(v.at(j), v.at(j - 1));
+				std::swap(vv.at(j), vv.at(j - 1));
 			}
 		}
 	}
 
-	Output(v, "BubbleSort");
+	Output(vv, "BubbleSort");
 }
 
-void SelectionSort(std::vector<int>& v)
+void SelectionSort(const std::vector<int>& v)
 {
-	for (int i = 0; i < v.size(); i++)
+	std::vector<int> vv = v;
+	for (int i = 0; i < vv.size(); i++)
 	{
 		int minNum = i;
-		for (int j = i; j < v.size(); j++)
+		for (int j = i; j < vv.size(); j++)
 		{
-			if (v.at(minNum) > v.at(j))
+			if (vv.at(minNum) > vv.at(j))
 				minNum = j;
 		}
 
-		std::swap(v.at(i), v.at(minNum));
+		std::swap(vv.at(i), vv.at(minNum));
 	}
 
-	Output(v, "SelectionSort");
+	Output(vv, "SelectionSort");
 }
 
-void InsertionSort(std::vector<int>& v)
+void InsertionSort(const std::vector<int>& v)
 {
+	std::vector<int> vv = v;
+	for (int i = 0; i < vv.size() - 1; i++)
+	{
+		for (int j = i + 1; j > 0; j--)
+		{
+			if (vv.at(j - 1) > vv.at(j))
+				std::swap(vv.at(j - 1), vv.at(j));
+			else
+				break;
+		}
+	}
+
+	Output(vv, "InsertionSort");
 }
 
 void HeapSort(std::vector<int>& v)
