@@ -1,8 +1,7 @@
-#include <utility>
+﻿#include <utility>
 #include <Windows.h>
 #include "Sort.h"
 #include "DataStructure.h"
-using namespace std;
 #define SORT
 //#define DATA_STRUCTURE
 
@@ -10,15 +9,15 @@ int main(void) {
     SetConsoleOutputCP(65001);
 
 #ifdef SORT
-	// 配列作成
-	int n;
-	cin >> n;
-	vector<int> v(n);
-	for (auto& i: v) cin >> v.at(i);
+    // 配列作成
+    int n;
+    std::cin >> n;
+    std::vector<int> v(n);
+    for (auto& i: v) std::cin >> i;
 
-	BubbleSort(v);
+    BubbleSort(v);
 
-	SelectionSort(v);
+    SelectionSort(v);
 
 #endif // SORT
 
@@ -27,5 +26,5 @@ int main(void) {
 #endif // DATA_STRUCTURE
 
 
-	return 0;
+    return 0;
 }

@@ -1,17 +1,17 @@
-#include "Sort.h"
+﻿#include "Sort.h"
 
-void Output(const vector<int>& v, const string& s)
+void Output(const std::vector<int>& v, const std::string& s)
 {
-	cout << s << endl;
+	std::cout << s << std::endl;
 	for (auto vv : v)
 	{
-		cout << vv;
+		std::cout << vv;
 	}
 
-	cout << endl;
+	std::cout << std::endl;
 }
 
-void BubbleSort(vector<int>& v)
+void BubbleSort(std::vector<int>& v)
 {
 	for (int i = 0; i < v.size(); i++)
 	{
@@ -19,7 +19,7 @@ void BubbleSort(vector<int>& v)
 		{
 			if (v.at(j) < v.at(j - 1))
 			{
-				swap(v.at(j), v.at(j - 1));
+				std::swap(v.at(j), v.at(j - 1));
 			}
 		}
 	}
@@ -27,7 +27,7 @@ void BubbleSort(vector<int>& v)
 	Output(v, "BubbleSort");
 }
 
-void SelectionSort(vector<int>& v)
+void SelectionSort(std::vector<int>& v)
 {
 	for (int i = 0; i < v.size(); i++)
 	{
@@ -38,24 +38,24 @@ void SelectionSort(vector<int>& v)
 				minNum = j;
 		}
 
-		swap(v.at(i), v.at(minNum));
+		std::swap(v.at(i), v.at(minNum));
 	}
 
 	Output(v, "SelectionSort");
 }
 
-void InsertionSort(vector<int>& v)
+void InsertionSort(std::vector<int>& v)
 {
 }
 
-void HeapSort(vector<int>& v)
+void HeapSort(std::vector<int>& v)
 {
 }
 
-void MergeSort(vector<int>& v)
+void MergeSort(std::vector<int>& v)
 {
 }
 
-void QuickSort(vector<int>& v)
+void QuickSort(std::vector<int>& v)
 {
 }
